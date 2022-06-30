@@ -10,10 +10,9 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextArea;
 
 public class Area_de_Trabalho extends JFrame {
-
-	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -37,49 +36,31 @@ public class Area_de_Trabalho extends JFrame {
 	public Area_de_Trabalho() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		getContentPane().setLayout(null);
 		
-		JMenu mnNomeDoMdico = new JMenu("Nome do Médico");
-		mnNomeDoMdico.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		mnNomeDoMdico.setBounds(156, 135, 129, 21);
-		contentPane.add(mnNomeDoMdico);
+		JTextArea txtrEnfermeirosas = new JTextArea();
+		txtrEnfermeirosas.setText("Enfermeiros(as)");
+		txtrEnfermeirosas.setBounds(158, 134, 91, 17);
+		getContentPane().add(txtrEnfermeirosas);
 		
-		JMenu mnListaDePacientes = new JMenu("Lista de Pacientes");
-		mnListaDePacientes.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		mnListaDePacientes.setBounds(156, 109, 147, 21);
-		contentPane.add(mnListaDePacientes);
+		JTextArea txtrListaDePacientes = new JTextArea();
+		txtrListaDePacientes.setText("Lista de Pacientes");
+		txtrListaDePacientes.setBounds(158, 92, 101, 17);
+		getContentPane().add(txtrListaDePacientes);
 		
-		JMenu mnEnfermeirosas = new JMenu("Enfermeiros(as)");
-		mnEnfermeirosas.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		mnEnfermeirosas.setBounds(156, 56, 154, 21);
-		contentPane.add(mnEnfermeirosas);
+		JTextArea txtrAgendaCirrgica = new JTextArea();
+		txtrAgendaCirrgica.setText("Agenda Cirúrgica");
+		txtrAgendaCirrgica.setBounds(158, 113, 98, 17);
+		getContentPane().add(txtrAgendaCirrgica);
 		
-		JMenu mnMdicosAux = new JMenu("Médicos Aux.");
-		mnMdicosAux.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		mnMdicosAux.setBounds(155, 161, 121, 21);
-		contentPane.add(mnMdicosAux);
+		JTextArea txtrMdicosAux = new JTextArea();
+		txtrMdicosAux.setText("Médicos Aux.");
+		txtrMdicosAux.setBounds(158, 154, 75, 17);
+		getContentPane().add(txtrMdicosAux);
 		
-		JMenu mnAgendaCirrgica = new JMenu("Agenda Cirúrgica");
-		mnAgendaCirrgica.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		mnAgendaCirrgica.setBounds(156, 82, 147, 21);
-		contentPane.add(mnAgendaCirrgica);
+		JTextArea txtrNomeDoMdico = new JTextArea();
+		txtrNomeDoMdico.setText("Nome do Médico");
+		txtrNomeDoMdico.setBounds(158, 71, 96, 17);
+		getContentPane().add(txtrNomeDoMdico);
 	}
 }
