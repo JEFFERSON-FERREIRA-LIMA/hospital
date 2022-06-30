@@ -11,6 +11,7 @@ import back.Repositorio;
 import back.Usuario;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
@@ -76,7 +77,7 @@ public class Cadastro extends JFrame {
 								
 			
 				repositorio.addUsuario(new Usuario(txtnome.getText(), txtespec.getText(), txtsenha.getText()));
-				
+				JOptionPane.showMessageDialog(null, "usuário registrado com sucesso!");
 			}
 		});
 		btnSalvar.setBounds(133, 166, 105, 27);

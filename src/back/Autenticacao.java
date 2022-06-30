@@ -7,8 +7,8 @@ public class Autenticacao {
 		repositorio = new Repositorio();
 		
 	}
-	public void login(String usuario, String senha) {
-		Usuario user = repositorio.getUserByLogin(usuario, senha);
+	public boolean login(String usuario, String senha) {
+		return repositorio.getUserByLogin(usuario, senha);
 	}
 	
 }
